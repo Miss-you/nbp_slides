@@ -8,7 +8,6 @@ import sys
 import os
 import argparse
 import mimetypes
-import subprocess
 from typing import cast
 from pathlib import Path
 from dotenv import load_dotenv
@@ -26,19 +25,6 @@ def save_binary_file(file_name: str, data: bytes) -> None:
     with open(file_name, "wb") as f:
         f.write(data)
     print(f"File saved to: {file_name}")
-
-
-def convert_to_jpeg(source_path: str, target_path: str) -> bool:
-    result = subprocess.run(
-        ["sips", "-s", "format", "jpeg", source_path, "--out", target_path],
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode != 0:
-        print(f"JPEG conversion failed for {source_path}: {result.stderr}", file=sys.stderr)
-        return False
-    print(f"JPEG converted output saved to: {target_path}")
-    return True
 
 def enlarge(
     image_path: str,
@@ -102,14 +88,10 @@ def enlarge(
                 inline_data = part.inline_data
                 if inline_data and inline_data.data:
                     source_extension = mimetypes.guess_extension(inline_data.mime_type or "image/png") or ".png"
-                    if source_extension in {".jpg", ".jpeg"}:
-                        save_binary_file(output_path, inline_data.data)
-                        return
-
-                    temp_output_path = f"{output_path}{source_extension}"
-                    save_binary_file(temp_output_path, inline_data.data)
-                    if convert_to_jpeg(temp_output_path, output_path):
-                        Path(temp_output_path).unlink(missing_ok=True)
+                    final_output_path = output_path
+                    if not output_path.lower().endswith(source_extension.lower()):
+                        final_output_path = str(Path(output_path).with_suffix(source_extension))
+                    save_binary_file(final_output_path, inline_data.data)
                     return
 
     except Exception as e:

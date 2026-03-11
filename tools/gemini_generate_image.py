@@ -4,12 +4,11 @@ Command-line tool for generating images using Gemini 3.1 Flash Image Preview.
 Supports text-only generation or text + image input.
 """
 
-from typing import Optional, cast
+from typing import Optional
 from pathlib import Path
 import argparse
 import mimetypes
 import os
-import subprocess
 import sys
 
 from dotenv import load_dotenv
@@ -28,21 +27,6 @@ def save_binary_file(file_name: str, data: bytes) -> None:
     with open(file_name, "wb") as f:
         f.write(data)
     print(f"File saved to: {file_name}")
-
-
-def convert_to_jpeg(source_path: str, target_path: str) -> bool:
-    result = subprocess.run(
-        ["sips", "-s", "format", "jpeg", source_path, "--out", target_path],
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode != 0:
-        print(f"JPEG conversion failed for {source_path}: {result.stderr}", file=sys.stderr)
-        return False
-    print(f"JPEG alias saved to: {target_path}")
-    return True
-
-
 def generate(
     prompt: str,
     image_paths: Optional[list[str]] = None,
@@ -113,9 +97,6 @@ def generate(
                 file_name = f"{output_prefix}_{file_index}{file_extension}"
                 file_index += 1
                 save_binary_file(file_name, inline_data.data)
-                if file_extension not in {".jpg", ".jpeg"}:
-                    jpeg_name = f"{output_prefix}_{file_index - 1}.jpg"
-                    convert_to_jpeg(file_name, jpeg_name)
 
 
 def main():
