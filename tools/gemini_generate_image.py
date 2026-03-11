@@ -4,11 +4,12 @@ Command-line tool for generating images using Gemini 3.1 Flash Image Preview.
 Supports text-only generation or text + image input.
 """
 
-from typing import Optional
+from typing import Optional, cast
 from pathlib import Path
 import argparse
 import mimetypes
 import os
+import subprocess
 import sys
 
 from dotenv import load_dotenv
@@ -29,6 +30,19 @@ def save_binary_file(file_name: str, data: bytes) -> None:
     print(f"File saved to: {file_name}")
 
 
+def convert_to_jpeg(source_path: str, target_path: str) -> bool:
+    result = subprocess.run(
+        ["sips", "-s", "format", "jpeg", source_path, "--out", target_path],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"JPEG conversion failed for {source_path}: {result.stderr}", file=sys.stderr)
+        return False
+    print(f"JPEG alias saved to: {target_path}")
+    return True
+
+
 def generate(
     prompt: str,
     image_paths: Optional[list[str]] = None,
@@ -36,7 +50,7 @@ def generate(
     image_size: str = "1K", # kept in signature for compatibility but ignored
     aspect_ratio: Optional[str] = None,
 ) -> None:
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY environment variable not set", file=sys.stderr)
         sys.exit(1)
@@ -59,16 +73,22 @@ def generate(
             
             parts.append(types.Part.from_bytes(data=image_bytes, mime_type=mime_type))
 
-    content = types.Content(role="user", parts=parts)
+    content = types.Content(
+        role="user",
+        parts=parts,
+    )
 
-    image_config_dict: types.ImageConfigDict = {}
+    image_config_dict = {}
     if aspect_ratio:
         image_config_dict["aspect_ratio"] = aspect_ratio
-    
-    generate_content_config: types.GenerateContentConfigDict = {
-        "response_modalities": ["IMAGE", "TEXT"],
-        "image_config": image_config_dict,
-    }
+
+    if image_size:
+        image_config_dict["image_size"] = image_size
+
+    generate_content_config = types.GenerateContentConfig(
+        response_modalities=["IMAGE", "TEXT"],
+        image_config=types.ImageConfig(**image_config_dict),
+    )
 
     file_index = 0
     for chunk in client.models.generate_content_stream(
@@ -93,6 +113,9 @@ def generate(
                 file_name = f"{output_prefix}_{file_index}{file_extension}"
                 file_index += 1
                 save_binary_file(file_name, inline_data.data)
+                if file_extension not in {".jpg", ".jpeg"}:
+                    jpeg_name = f"{output_prefix}_{file_index - 1}.jpg"
+                    convert_to_jpeg(file_name, jpeg_name)
 
 
 def main():

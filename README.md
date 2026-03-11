@@ -8,7 +8,7 @@ Read the full article here:
 *   [中文版 (Chinese)](https://yage.ai/nano-banana-pro.html)
 *   [English Version](https://yage.ai/nano-banana-pro-en.html)
 
-This project demonstrates a workflow to generate a complete, professional-grade slide deck using AI image generation (Nano Banana Pro / Gemini). The core idea is to treat the slide deck as a software artifact generated from a "kernel" of code, markdown, and assets, rather than manually assembling it in PowerPoint or Keynote.
+This project demonstrates a workflow to generate a complete, professional-grade slide deck using AI image generation. The presentation content is about Nano Banana Pro, while the repository's default Gemini API model is now Nano Banana 2 (`gemini-3.1-flash-image-preview`). The core idea is to treat the slide deck as a software artifact generated from a "kernel" of code, markdown, and assets, rather than manually assembling it in PowerPoint or Keynote.
 
 ## The Generative Kernel Philosophy
 
@@ -33,7 +33,7 @@ Run the generator to create 1K previews. This is fast and cheap for iteration.
 ```bash
 python tools/generate_slides.py
 ```
-This parses the outline, calls the Gemini 3 Pro Image Preview API, and saves images to `generated_slides/`.
+This parses the outline, calls the Gemini 3.1 Flash Image Preview API by default, and saves images to `generated_slides/`.
 
 ### 3. Refine & Upscale (Production Mode)
 Once specific slides are approved, upscale them to 4K resolution using the generative upscaler.
@@ -55,7 +55,7 @@ The presentation uses **Reveal.js** to display the generated "Mega-Images" as fu
     ```bash
     uv venv  # using uv is recommended
     source .venv/bin/activate
-    pip install -r requirements.txt
+    uv pip install -r requirements.txt
     ```
 2.  **Credentials**:
     Create a `.env` file with your API key:

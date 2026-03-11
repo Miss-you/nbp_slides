@@ -8,13 +8,12 @@ import sys
 import os
 import argparse
 import mimetypes
-from typing import Optional
+import subprocess
+from typing import cast
 from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-
-from concurrent.futures import ThreadPoolExecutor
 
 # Load environment variables
 script_dir = Path(__file__).parent
@@ -28,22 +27,32 @@ def save_binary_file(file_name: str, data: bytes) -> None:
         f.write(data)
     print(f"File saved to: {file_name}")
 
+
+def convert_to_jpeg(source_path: str, target_path: str) -> bool:
+    result = subprocess.run(
+        ["sips", "-s", "format", "jpeg", source_path, "--out", target_path],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"JPEG conversion failed for {source_path}: {result.stderr}", file=sys.stderr)
+        return False
+    print(f"JPEG converted output saved to: {target_path}")
+    return True
+
 def enlarge(
     image_path: str,
     output_path: str,
-    api_key: Optional[str] = None,
 ) -> None:
     """Upscale the given image to 4K."""
-    if not api_key:
-        api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY environment variable not set", file=sys.stderr)
-        return
+        sys.exit(1)
 
     if not Path(image_path).exists():
         print(f"Error: Input image not found: {image_path}", file=sys.stderr)
-        return
+        sys.exit(1)
 
     client = genai.Client(api_key=api_key)
     model = "gemini-3.1-flash-image-preview"
@@ -61,19 +70,18 @@ def enlarge(
         role="user",
         parts=[
             types.Part.from_text(text=prompt),
-            types.Part.from_bytes(data=image_bytes, mime_type=mime_type),
+            types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
         ],
     )
-    
-    # Configuration for output based on user recommendation for 4K
-    image_config: types.ImageConfigDict = {
-        "aspect_ratio": "16:9",
-    }
 
-    generate_content_config: types.GenerateContentConfigDict = {
+    raw_config = {
         "response_modalities": ["IMAGE", "TEXT"],
-        "image_config": image_config,
+        "image_config": {
+            "aspect_ratio": "16:9",
+            "image_size": "4K",
+        },
     }
+    generate_content_config = cast(types.GenerateContentConfigDict, cast(object, raw_config))
 
     print(f"Upscaling {image_path} to 4K...")
     
@@ -93,33 +101,29 @@ def enlarge(
             for part in parts_out:
                 inline_data = part.inline_data
                 if inline_data and inline_data.data:
-                    save_binary_file(output_path, inline_data.data)
+                    source_extension = mimetypes.guess_extension(inline_data.mime_type or "image/png") or ".png"
+                    if source_extension in {".jpg", ".jpeg"}:
+                        save_binary_file(output_path, inline_data.data)
+                        return
+
+                    temp_output_path = f"{output_path}{source_extension}"
+                    save_binary_file(temp_output_path, inline_data.data)
+                    if convert_to_jpeg(temp_output_path, output_path):
+                        Path(temp_output_path).unlink(missing_ok=True)
                     return
 
     except Exception as e:
-        print(f"Error upscaling {image_path}: {e}", file=sys.stderr)
+        print(f"Error during upscaling: {e}", file=sys.stderr)
+        sys.exit(1)
 
 def main():
-    parser = argparse.ArgumentParser(description="Upscale image(s) to 4K")
-    parser.add_argument("--input", "-i", action="append", help="Input image path (can be used multiple times)")
-    parser.add_argument("--output", "-o", action="append", help="Output image path (can be used multiple times)")
-    parser.add_argument("--workers", "-w", type=int, default=5, help="Number of parallel workers (default: 5)")
+    parser = argparse.ArgumentParser(description="Upscale image to 4K")
+    parser.add_argument("--input", "-i", required=True, help="Input image path")
+    parser.add_argument("--output", "-o", required=True, help="Output image path")
     
     args = parser.parse_args()
-    
-    if not args.input or not args.output:
-        print("Error: Both --input and --output are required.")
-        sys.exit(1)
-        
-    if len(args.input) != len(args.output):
-        print("Error: Number of inputs must match number of outputs.")
-        sys.exit(1)
 
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-
-    with ThreadPoolExecutor(max_workers=args.workers) as executor:
-        for inp, outp in zip(args.input, args.output):
-            executor.submit(enlarge, inp, outp, api_key)
+    enlarge(args.input, args.output)
 
 if __name__ == "__main__":
     main()
