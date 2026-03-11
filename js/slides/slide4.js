@@ -1,4 +1,4 @@
-export const background = 'generated_slides/slide_04_0.jpg';
+export const background = 'generated_slides/slide_04_0.png';
 export const backgroundSize = '100% 100%';
 
 export const html = `

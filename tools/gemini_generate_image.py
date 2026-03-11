@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Command-line tool for generating images using Gemini 3 Pro Image Preview.
+Command-line tool for generating images using Gemini 3.1 Flash Image Preview.
 Supports text-only generation or text + image input.
 """
 
-from typing import Optional, List
+from typing import Optional
 from pathlib import Path
 import argparse
 import mimetypes
@@ -27,17 +27,14 @@ def save_binary_file(file_name: str, data: bytes) -> None:
     with open(file_name, "wb") as f:
         f.write(data)
     print(f"File saved to: {file_name}")
-
-
 def generate(
     prompt: str,
-    image_paths: Optional[List[str]] = None,
+    image_paths: Optional[list[str]] = None,
     output_prefix: str = "output",
     image_size: str = "1K", # kept in signature for compatibility but ignored
     aspect_ratio: Optional[str] = None,
 ) -> None:
-    """Send text (and optionally images) to Gemini 3 Pro Image Preview and stream responses."""
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY environment variable not set", file=sys.stderr)
         sys.exit(1)
@@ -60,18 +57,15 @@ def generate(
             
             parts.append(types.Part.from_bytes(data=image_bytes, mime_type=mime_type))
 
-    contents = [
-        types.Content(
-            role="user",
-            parts=parts,
-        )
-    ]
+    content = types.Content(
+        role="user",
+        parts=parts,
+    )
 
     image_config_dict = {}
     if aspect_ratio:
         image_config_dict["aspect_ratio"] = aspect_ratio
-    
-    # Enable image_size again as SDK updated
+
     if image_size:
         image_config_dict["image_size"] = image_size
 
@@ -82,18 +76,23 @@ def generate(
 
     file_index = 0
     for chunk in client.models.generate_content_stream(
-        model="gemini-3-pro-image-preview",
-        contents=contents,
+        model="gemini-3.1-flash-image-preview",
+        contents=content,
         config=generate_content_config,
     ):
-        if not chunk.candidates or not chunk.candidates[0].content:
+        candidate = chunk.candidates[0] if chunk.candidates else None
+        content_out = candidate.content if candidate else None
+        parts_out = content_out.parts if content_out and content_out.parts else []
+        if not parts_out:
             continue
 
-        for part in chunk.candidates[0].content.parts:
-            if getattr(part, "text", None):
+        for part in parts_out:
+            if part.text:
                 print(part.text, end="", flush=True)
-            elif getattr(part, "inline_data", None) and part.inline_data.data:
-                inline_data = part.inline_data
+                continue
+
+            inline_data = part.inline_data
+            if inline_data and inline_data.data and inline_data.mime_type:
                 file_extension = mimetypes.guess_extension(inline_data.mime_type) or ".png"
                 file_name = f"{output_prefix}_{file_index}{file_extension}"
                 file_index += 1
@@ -102,7 +101,7 @@ def generate(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate images using Gemini 3 Pro Image Preview",
+        description="Generate images using Gemini 3.1 Flash Image Preview",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

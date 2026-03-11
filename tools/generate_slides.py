@@ -6,8 +6,10 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 import time
 
-# Import gemini_generate_image from the same directory
-import gemini_generate_image
+if __package__:
+    from . import gemini_generate_image
+else:
+    from tools import gemini_generate_image
 
 def parse_slides(outline_path, start_slide=1, end_slide=19, specific_slides=None):
     with open(outline_path, 'r') as f:
@@ -141,16 +143,26 @@ def main():
         import subprocess
         
         print("Starting batch enlargement...")
-        # Find all slide_XX_0.jpg files (but not already enlarged ones)
-        slide_pattern = str(output_dir / "slide_*_0.jpg")
-        files = glob.glob(slide_pattern)
+        slide_patterns = [
+            str(output_dir / "slide_*_0.png"),
+            str(output_dir / "slide_*_0.jpg"),
+            str(output_dir / "slide_*_0.jpeg"),
+        ]
+        files = []
+        seen = set()
+        for slide_pattern in slide_patterns:
+            for file_path in glob.glob(slide_pattern):
+                slide_key = re.sub(r"\.(png|jpe?g)$", "", file_path, flags=re.IGNORECASE)
+                if slide_key in seen:
+                    continue
+                seen.add(slide_key)
+                files.append(file_path)
         
         # Filter if --slides is provided
         if args.slides:
             filtered_files = []
             for f in files:
-                # Extract number from filename slide_XX_0.jpg
-                match = re.search(r'slide_(\d+)_0.jpg', f)
+                match = re.search(r'slide_(\d+)_0\.(png|jpe?g)$', f, re.IGNORECASE)
                 if match:
                     num = int(match.group(1))
                     if num in args.slides:
@@ -161,8 +173,6 @@ def main():
         
         for file_path in sorted(files):
             file_path_obj = Path(file_path)
-            # Define output path: slide_XX_0_4k.jpg
-            # OR user said "use suffix to distinguish"
             output_name = file_path_obj.stem + "_4k" + file_path_obj.suffix
             output_path = output_dir / output_name
             

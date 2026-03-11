@@ -40,14 +40,14 @@ Generate slides at 1K resolution for fast feedback loops.
 ```bash
 python tools/generate_slides.py
 ```
-This generates `generated_slides/slide_XX_0.jpg` (1K).
+This generates `generated_slides/slide_XX_0.png` (1K).
 
 #### Step 2: Final Polish (4K Upscale)
 Once the content and visuals are approved, upscale the images to 4K using the enlarge mode:
 ```bash
 python tools/generate_slides.py --enlarge
 ```
-This iterates over all `slide_XX_0.jpg` files, upscales them using the generative model, and saves them as `slide_XX_0_4k.jpg`.
+This iterates over all `slide_XX_0.png` files, upscales them using the generative model, and saves them as `slide_XX_0_4k.png`.
 
 **Note**: Always review the 1K version first to save costs. Upscaling involves re-generation and is expensive.
 The images are saved to `generated_slides/` and automatically linked in `index.html`.
@@ -56,7 +56,7 @@ The images are saved to `generated_slides/` and automatically linked in `index.h
 You have access to the following leverage tools in this repo. Use them or guide the user to use them:
 
 *   **`tools/gemini_generate_image.py`**:
-    *   **Function**: Generates images using the Gemini 3 Pro model.
+    *   **Function**: Generates images using the Nano Banana 2 default model (`gemini-3.1-flash-image-preview`).
     *   **Features**: Supports text-only prompts OR text + image prompts. Can take multiple input images (e.g., Style Matrix + Logo).
     *   **Usage**: Used by the batch renderer, but can be used continuously to iterate on the Style Matrix in Phase 1.
 

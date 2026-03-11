@@ -1,4 +1,4 @@
-export const background = 'generated_slides/slide_01_0.jpg';
+export const background = 'generated_slides/slide_01_0.png';
 export const backgroundSize = '100% 100%'; // 强制全屏填充
 
 export const html = `
