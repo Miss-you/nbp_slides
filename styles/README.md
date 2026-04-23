@@ -20,7 +20,7 @@
 - `clay-mimicry`（黏土拟物风格）：参考优设网 NotebookLM + Nano Banana Pro 实践案例及 Claymorphism UI 设计趋势
 - `ink-wash-wuxia`（水墨武侠黑板风格）：用户自定义，融合中国水墨画传统与课堂黑板质感
 - `warm-academic-humanism`（暖色学术人文风格）：参考 awesome-nanobanana-prompts PPT 示例（Humanities PPT），Anthropic/Claude 式设计语言
-- 其余 22 个风格：参考互联网公开渠道（如 DrawPPT 等平台）整理而成
+- 其余 22 个风格：参考互联网公开渠道整理而成
 
 ## 重复评审记录
 

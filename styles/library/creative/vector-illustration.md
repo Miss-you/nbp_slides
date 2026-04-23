@@ -8,13 +8,16 @@ vector-illustration
 
 ## 适配模型
 - Nano Banana Pro (gemini-3-pro-image-preview)
-- Notebookml
+- NotebookLM
 - Youmind
 - Listenhub
 - Lovart
 
 ## 风格描述
 扁平化矢量插画风格，具有清晰的黑色轮廓线和复古柔和的配色方案。强调几何化简化和玩具模型般的可爱感。
+
+## 原始提示词
+该风格的原始提示词主要围绕扁平化矢量插画、统一黑色轮廓线、复古柔和配色、几何化简化、横向全景构图与玩具模型般的可爱感展开，后续已整理和扩展为下方可直接复用的基础提示词模板。
 
 ## 基础提示词模板
 

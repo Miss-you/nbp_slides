@@ -8,7 +8,7 @@ soft-pastel-edu
 
 ## 适配模型
 - Nano Banana Pro (gemini-3-pro-image-preview)
-- Notebookml
+- NotebookLM
 - Youmind
 - Listenhub
 - Lovart

@@ -47,10 +47,15 @@ git commit -m "docs: add harness talk design and content plan"
 
 **Files:**
 - Modify: `docs/talks/2026-03-28-harness-talk-master.md`
-- Reference: `workspace/articles/final-report.md`
-- Reference: `workspace/synthesis/meta-insights.md`
+- Required reference: `docs/plans/2026-03-28-harness-problem-solution-talk-design.md`
+- Optional local reference, if present: `workspace/articles/final-report.md`
+- Optional local reference, if present: `workspace/synthesis/meta-insights.md`
 
-**Step 1: Draft each chapter as problem -> solution -> audience value**
+**Step 1: Confirm reproducible inputs**
+
+Use `docs/plans/2026-03-28-harness-problem-solution-talk-design.md` and the current master talk draft as the required sources for this task. If the local `workspace/` files exist, use them only as supplementary background. If they do not exist, proceed without them and do not block the task.
+
+**Step 2: Draft each chapter as problem -> solution -> audience value**
 
 For each of the `5+1` materials, write:
 - what problem it addresses
@@ -58,16 +63,16 @@ For each of the `5+1` materials, write:
 - why this matters to mixed student/worker listeners
 - what to omit
 
-**Step 2: Keep each chapter narrow**
+**Step 3: Keep each chapter narrow**
 
 Limit each main chapter to `1-2` problems, not broad article summaries.
 
-**Step 3: Verify storyline continuity**
+**Step 4: Verify storyline continuity**
 
 Check that the full sequence reads as:
 `when not to use agent -> how to feed it -> how to keep it stable -> how to measure it -> where ROI is today -> where this goes next`
 
-**Step 4: Commit**
+**Step 5: Commit**
 
 ```bash
 git add docs/talks/2026-03-28-harness-talk-master.md
@@ -221,11 +226,13 @@ Expected:
 - slide images generated
 - PPTX exported successfully
 
-**Step 5: Commit**
+**Step 5: Commit tracked source changes**
+
+Keep generated slide images and `openclaw-harness.pptx` as local/export artifacts because `generated_slides/`, image files, and `*.pptx` are ignored in this repo. Commit only the tracked source inputs needed to reproduce the deck.
 
 ```bash
-git add outline_visual.md visual_guideline.md generated_slides openclaw-harness.pptx
-git commit -m "feat: generate clay-style harness talk deck"
+git add outline_visual.md visual_guideline.md
+git commit -m "feat: prepare clay-style harness talk deck"
 ```
 
 ### Task 8: Final Acceptance
