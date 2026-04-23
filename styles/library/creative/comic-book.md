@@ -10,14 +10,6 @@ comic-book
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/comic-book
-- 原始分类：创意
-- 标签：comic、superhero、halftone、action
-- 徽标：无
-- 预览图：../previews/comic-book.webp
-
 ## 风格描述
 致敬复古漫威/DC黄金时代的漫画英雄风格。画面以参差不齐的锯齿形面板边框分割构图，模拟真实翻印漫画册的视觉体验。超级英雄角色作为主视觉锚点，以戏剧化动作姿态演示幻灯片核心概念。所有文字信息内嵌于对话气泡和标志性黄色叙述框中，模拟1960年代印刷排版。核心视觉技法为CMYK套色工艺的半调网点阴影，配合粗黑轮廓线和高饱和原色系，营造震撼的复古印刷质感。整体氛围充满动感、力量与戏剧张力。
 

@@ -13,14 +13,6 @@ ikea-style
 - Listenhub
 - Lovart
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/ikea-style
-- 原始分类：教育
-- 标签：ikea、instruction、step-by-step、manual
-- 徽标：无
-- 预览图：../previews/ikea-style.webp
-
 ## 原始提示词
 ```text
 Step-by-step, instruction manual (Ikea style). Style: Flat 2.0 vector illustration. Layout: S-Curve path winding down the page. Visuals: 5 distinct steps represented by character illustrations interacting with objects. Connectors: Dotted lines. Colors: Bright primary colors on white.

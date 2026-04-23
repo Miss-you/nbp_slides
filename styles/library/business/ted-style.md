@@ -10,14 +10,6 @@ TED演讲冲击力风格
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/ted-style
-- 原始分类：商务
-- 标签：ted、presentation、clean、professional
-- 徽标：新
-- 预览图：../previews/ted-style.webp
-
 ## 原始提示词
 ```text
 TED Style presentation design. Clean, impactful slides with one idea per slide. Large, bold typography on simple backgrounds. High-quality imagery that supports the message. Minimal text, maximum visual impact. Red accent color inspired by TED branding. Focus on storytelling and emotional connection.

@@ -10,14 +10,6 @@ neon-nightlife
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/neon-nightlife
-- 原始分类：科技
-- 标签：neon、nightlife、cyberpunk、vegas
-- 徽标：无
-- 预览图：../previews/neon-nightlife.webp
-
 ## 风格描述
 融合赛博朋克拉斯维加斯夜生活与复古霓虹灯管艺术的独特数据可视化风格。背景为质感厚重的深色砖墙肌理，模拟真实城市街景的粗糙表面。数据点以发光的玻璃霓虹灯管形式呈现，灯管弯曲塑形出图表的形态——柱形图由粗细均匀的霓虹灯管竖排组成，折线图由连续弯折的单根霓虹管构成。文字以霓虹灯管弯曲而成的草书字体书写，字母之间以发光导线相连，仿佛真实的霓虹招牌安装在砖墙之上。整体氛围烟雾弥漫、浓重的黑色电影质感，高对比度的霓虹光在暗夜中形成震撼的视觉冲击。
 

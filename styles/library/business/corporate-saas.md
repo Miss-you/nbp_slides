@@ -10,14 +10,6 @@ corporate-saas
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/corporate-saas
-- 原始分类：商务
-- 标签：saas、dark、corporate、tech
-- 徽标：无
-- 预览图：../previews/corporate-saas.webp
-
 ## 原始提示词
 ```text
 SaaS style, dark UI, high contrast. Visuals: Flat design, simple bar charts and line graphs. Palette: Dark slate background with electric blue and emerald green accents. Typography: Roboto or Inter style, clean and legible. Include percentage callouts.

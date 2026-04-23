@@ -10,14 +10,6 @@ cinematic-poster
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/cinematic-poster
-- 原始分类：趣味
-- 标签：cinematic、movie、dramatic、hollywood
-- 徽标：推荐
-- 预览图：../previews/cinematic-poster.webp
-
 ## 原始提示词
 ```text
 Hollywood blockbuster, dramatic lighting. Style: Cinematic realism, dramatic lighting (teal and orange). Layout: Central hero character or object with credits-style text at the bottom for data points. Title: Massive, metallic 3D typography. Texture: Film grain, lens flare.

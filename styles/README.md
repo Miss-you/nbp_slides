@@ -1,45 +1,33 @@
 # Styles Library
 
-## 放在了哪里
+## 可用风格
 
-- 统一可用入口在 `styles/library/`
-- 合并后的 25 个可用风格清单在 `styles/library/manifest.json`
-- 本地原始版本保存在 `styles/local/`
-- DrawPPT 来源档案保存在 `styles/drawppt/`
-- 22 张 DrawPPT 预览图可本地保存在 `styles/drawppt/previews/`，不随代码提交
-- DrawPPT 原始来源清单和去重结果保存在 `styles/drawppt/manifest.json`
+`styles/library/` 下共 25 个可用风格，按 6 个分类组织：
 
-## 下载来源
+- `business/`：3 个
+- `education/`：7 个
+- `creative/`：6 个
+- `tech/`：3 个
+- `editorial/`：2 个
+- `fun/`：4 个
 
-- 来源页面：`https://www.drawppt.com/zh-CN/templates`
-- 抓取日期：`2026-03-18`
+完整清单见 `styles/library/manifest.json`。每个风格文件包含风格描述、基础提示词模板、页面类型模板和使用示例。
 
-## 分类结果
+## 参考来源
 
-- `styles/library/business/`：3 个风格
-- `styles/library/education/`：7 个风格
-- `styles/library/creative/`：6 个风格
-- `styles/library/tech/`：3 个风格
-- `styles/library/editorial/`：2 个风格
-- `styles/library/fun/`：4 个风格
+本项目部分风格模板的灵感参考了互联网公开渠道，并在此基础上进行了二次整理、扩展和标准化。各风格的具体来源如下：
 
-说明：
-- `styles/library/` 一共收纳了 25 个去重后的可用风格
-- 其中 20 个来自 DrawPPT，5 个来自本地已有整理
-- DrawPPT 原始来源仍然保留 22 条记录；预览图作为本地可选素材，不纳入代码提交
-- DrawPPT 里重复的 2 个风格没有进入统一入口，而是映射到了更好的本地版本
+- `clay-mimicry`（黏土拟物风格）：参考优设网 NotebookLM + Nano Banana Pro 实践案例及 Claymorphism UI 设计趋势
+- `ink-wash-wuxia`（水墨武侠黑板风格）：用户自定义，融合中国水墨画传统与课堂黑板质感
+- `warm-academic-humanism`（暖色学术人文风格）：参考 awesome-nanobanana-prompts PPT 示例（Humanities PPT），Anthropic/Claude 式设计语言
+- 其余 22 个风格：参考互联网公开渠道（如 DrawPPT 等平台）整理而成
 
-## 重复评审
+## 重复评审记录
 
-1. `claude-style` 对应本地的 `styles/local/C-warm-academic-humanism.md`
-本地版本更好。原因是它保留了同一组核心视觉约束，同时额外提供了页面类型模板、技术参数、中文说明和来源注释，复用时更稳定。
-
-2. `claymation` 对应本地的 `styles/local/D-clay-mimicry.md`
-本地版本更好。原因是它对材质、光照、构图、页面模板和使用场景的定义明显更完整，而 DrawPPT 原版只是一个较短的风格提示词。
+1. `claude-style` → 合并为 `warm-academic-humanism`（本地版本更完整）
+2. `claymation` → 合并为 `clay-mimicry`（本地版本更完整）
 
 ## 使用建议
 
-- 想直接挑风格复用：优先从 `styles/library/<category>/` 里选
-- 想看合并后的完整清单：先看 `styles/library/manifest.json`
-- 想追溯 DrawPPT 原始来源：看 `styles/drawppt/manifest.json`
-- 想看视觉参考：可在本地放置对应预览图到 `styles/drawppt/previews/`
+- 想直接挑风格复用：从 `styles/library/<category>/<style-id>.md` 读取完整定义
+- 想看完整清单：先看 `styles/library/manifest.json`

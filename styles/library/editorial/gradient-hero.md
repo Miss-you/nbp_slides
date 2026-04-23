@@ -10,14 +10,6 @@ gradient-hero
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/gradient-hero
-- 原始分类：编辑
-- 标签：marketing、gradient、funnel、conversion
-- 徽标：无
-- 预览图：../previews/gradient-hero.webp
-
 ## 原始提示词
 ```text
 Marketing, conversion, flow. Visuals: A wide-to-narrow 3D funnel shape floating in center. Coloring: Smooth, modern mesh gradients (Instagram style brand colors).

@@ -10,14 +10,6 @@ bold-editorial
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/bold-editorial
-- 原始分类：编辑
-- 标签：editorial、magazine、bold、wired
-- 徽标：推荐
-- 预览图：../previews/bold-editorial.webp
-
 ## 原始提示词
 ```text
 Wired Magazine, Vox, high-impact journalism. Style: Magazine spread aesthetic. Visuals: Asymmetrical grid, massive typography for the headline, high-contrast color blocks (Yellow/Black or Red/White). Incorporate collage-style elements and abstract shapes. Grainy texture overlay.

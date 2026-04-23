@@ -10,14 +10,6 @@ rick-morty
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/rick-morty
-- 原始分类：创意
-- 标签：rickmorty、animated、scifi、comedy
-- 徽标：新
-- 预览图：../previews/rick-morty.webp
-
 ## 风格描述
 致敬Adult Swim动画《瑞克和莫蒂》的成人动画科幻喜剧风格。画面以粗重的黑色轮廓线勾勒人物与物体，角色表情极度夸张，比例刻意失调以增强喜剧效果。科幻元素贯穿始终：传送门枪发出的绿色旋涡光效、各维度奇异外星生物、星际飞船和外星建筑穿插于构图之中。配色方案明艳而带有一丝令人不安的诡异感，大量使用荧光绿传送门色、冷灰蓝色调和高饱和的互补撞色。构图表面混乱，实则有明确的视觉层次和叙事逻辑，整体散发着成人动画独有的黑色幽默与智识锋芒。
 

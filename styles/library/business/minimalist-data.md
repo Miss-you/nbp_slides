@@ -10,14 +10,6 @@ minimalist-data
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/minimalist-data
-- 原始分类：商务
-- 标签：minimal、data、clean、swiss
-- 徽标：无
-- 预览图：../previews/minimalist-data.webp
-
 ## 原始提示词
 ```text
 Clean, ample whitespace, Swiss design influence. Style: Clean Minimalist. Visuals: Simple sans-serif typography (Helvetica style), soft neutral background, monochromatic icons. No clutter, no gradients. Focus on negative space and alignment. Render text labels clearly.

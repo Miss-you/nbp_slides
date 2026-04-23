@@ -10,14 +10,6 @@ dark-mode-tech
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/dark-mode-tech
-- 原始分类：科技
-- 标签：cyberpunk、dark、neon、developer
-- 徽标：新
-- 预览图：../previews/dark-mode-tech.webp
-
 ## 风格描述
 面向赛博朋克、加密货币和开发者文化的未来主义暗黑科技UI风格。以深黑色与木炭灰为绝对背景基底，以霓虹青色和品红色作为功能性高亮点缀。视觉核心为发光的细线电路图案、玻璃拟态卡片效果和等宽编程字体排版，整体呈现精密电路原理图的技术美学。画面散发浓郁的开发者美学：终端命令行、代码块、十六进制数据流和系统监控界面元素穿插于内容之间，在科技理性与赛博朋克美感之间寻找完美平衡点。
 

@@ -10,14 +10,6 @@ whiteboard-strategy
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/whiteboard-strategy
-- 原始分类：趣味
-- 标签：whiteboard、startup、strategy、handwritten
-- 徽标：无
-- 预览图：../previews/whiteboard-strategy.webp
-
 ## 风格描述
 创业公司白板策略手绘风格是一套模拟真实会议室白板场景的演示主题，专为创业团队头脑风暴、战略推演、产品路线图规划等高强度讨论场景而设计。整体画面还原了一块经过反复书写和擦拭的磁性白板表面——微微泛黄的白色底板上留有淡淡的旧墨痕迹，板面带有细腻的反光质感，边缘可见铝合金边框和底部笔槽的细节，营造出身临其境的"作战室"沉浸感。
 

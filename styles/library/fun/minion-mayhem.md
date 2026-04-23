@@ -10,14 +10,6 @@ minion-mayhem
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/minion-mayhem
-- 原始分类：趣味
-- 标签：minion、animated、playful、fun
-- 徽标：无
-- 预览图：../previews/minion-mayhem.webp
-
 ## 风格描述
 小黄人乱斗动画趣味风格是一套以经典动画电影中黄色胶囊形小助手为灵感、专为轻松活泼的演示场景设计的趣味幻灯片主题。整体视觉借鉴了3D动画电影的渲染质感与角色设计语言，以香蕉黄（#FFD93D）为画面主色调，搭配牛仔蓝（#4A90D9）与工业灰（#6B7B8D）构建出一个充满童趣与活力的视觉世界。小黄人角色贯穿每一页幻灯片，以各种搞怪姿态与数据图表互动，让严肃的商业内容变得生动有趣。
 

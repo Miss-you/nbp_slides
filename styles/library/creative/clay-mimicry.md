@@ -9,9 +9,6 @@ clay-mimicry
 ## 适配模型
 - Nano Banana Pro (gemini-3-pro-image-preview)
 
-## 风格来源
-来自[优设网](https://www.uisdc.com/nano-banana-pro-5)的 NotebookLM + Nano Banana Pro 实践案例，以及 Claymorphism（黏土态）UI 设计趋势。
-
 ## 风格描述
 3D黏土拟物风格，所有视觉元素都呈现出手工黏土/橡皮泥捏制的质感。物件圆润柔和、色彩低饱和、光照均匀柔和。整体风格触感强、亲切友好、信息层级清晰。适合将复杂概念可视化为直观易懂的3D场景。
 

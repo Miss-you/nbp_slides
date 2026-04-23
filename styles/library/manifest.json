@@ -1,6 +1,4 @@
 {
-  "source": "merged-active-styles",
-  "generated_at": "2026-03-18",
   "style_count": 25,
   "categories": [
     "business",
@@ -15,40 +13,28 @@
       "id": "corporate-saas",
       "name": "企业SaaS",
       "category": "business",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/business/corporate-saas.md",
-      "library_path": "styles/library/business/corporate-saas.md",
-      "preview_path": "styles/drawppt/previews/corporate-saas.webp",
+      "path": "business/corporate-saas.md",
       "aliases": []
     },
     {
       "id": "minimalist-data",
       "name": "极简数据叙事",
       "category": "business",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/business/minimalist-data.md",
-      "library_path": "styles/library/business/minimalist-data.md",
-      "preview_path": "styles/drawppt/previews/minimalist-data.webp",
+      "path": "business/minimalist-data.md",
       "aliases": []
     },
     {
       "id": "ted-style",
       "name": "TED风格",
       "category": "business",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/business/ted-style.md",
-      "library_path": "styles/library/business/ted-style.md",
-      "preview_path": "styles/drawppt/previews/ted-style.webp",
+      "path": "business/ted-style.md",
       "aliases": []
     },
     {
       "id": "clay-mimicry",
       "name": "黏土拟物风格",
       "category": "creative",
-      "origin": "local",
-      "source_path": "styles/local/D-clay-mimicry.md",
-      "library_path": "styles/library/creative/clay-mimicry.md",
-      "preview_path": null,
+      "path": "creative/clay-mimicry.md",
       "aliases": [
         "claymation"
       ]
@@ -57,140 +43,98 @@
       "id": "ink-wash-wuxia",
       "name": "水墨武侠黑板风格",
       "category": "creative",
-      "origin": "local",
-      "source_path": null,
-      "library_path": "styles/library/creative/ink-wash-wuxia.md",
-      "preview_path": null,
+      "path": "creative/ink-wash-wuxia.md",
       "aliases": []
     },
     {
       "id": "comic-book",
       "name": "漫画英雄",
       "category": "creative",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/creative/comic-book.md",
-      "library_path": "styles/library/creative/comic-book.md",
-      "preview_path": "styles/drawppt/previews/comic-book.webp",
+      "path": "creative/comic-book.md",
       "aliases": []
     },
     {
       "id": "rick-morty",
       "name": "瑞克和莫蒂风格",
       "category": "creative",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/creative/rick-morty.md",
-      "library_path": "styles/library/creative/rick-morty.md",
-      "preview_path": "styles/drawppt/previews/rick-morty.webp",
+      "path": "creative/rick-morty.md",
       "aliases": []
     },
     {
       "id": "vector-illustration",
       "name": "矢量插画风格",
       "category": "creative",
-      "origin": "local",
-      "source_path": "styles/local/B-vector-illustration.md",
-      "library_path": "styles/library/creative/vector-illustration.md",
-      "preview_path": null,
+      "path": "creative/vector-illustration.md",
       "aliases": []
     },
     {
       "id": "vintage-travel",
       "name": "复古旅行海报",
       "category": "creative",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/creative/vintage-travel.md",
-      "library_path": "styles/library/creative/vintage-travel.md",
-      "preview_path": "styles/drawppt/previews/vintage-travel.webp",
+      "path": "creative/vintage-travel.md",
       "aliases": []
     },
     {
       "id": "bold-editorial",
       "name": "大胆编辑风",
       "category": "editorial",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/editorial/bold-editorial.md",
-      "library_path": "styles/library/editorial/bold-editorial.md",
-      "preview_path": "styles/drawppt/previews/bold-editorial.webp",
+      "path": "editorial/bold-editorial.md",
       "aliases": []
     },
     {
       "id": "gradient-hero",
       "name": "渐变英雄漏斗",
       "category": "editorial",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/editorial/gradient-hero.md",
-      "library_path": "styles/library/editorial/gradient-hero.md",
-      "preview_path": "styles/drawppt/previews/gradient-hero.webp",
+      "path": "editorial/gradient-hero.md",
       "aliases": []
     },
     {
       "id": "ikea-style",
       "name": "宜家风格",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/ikea-style.md",
-      "library_path": "styles/library/education/ikea-style.md",
-      "preview_path": "styles/drawppt/previews/ikea-style.webp",
+      "path": "education/ikea-style.md",
       "aliases": []
     },
     {
       "id": "mind-map",
       "name": "思维导图",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/mind-map.md",
-      "library_path": "styles/library/education/mind-map.md",
-      "preview_path": "styles/drawppt/previews/mind-map.webp",
+      "path": "education/mind-map.md",
       "aliases": []
     },
     {
       "id": "process-flow",
       "name": "流程图",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/process-flow.md",
-      "library_path": "styles/library/education/process-flow.md",
-      "preview_path": "styles/drawppt/previews/process-flow.webp",
+      "path": "education/process-flow.md",
       "aliases": []
     },
     {
       "id": "sketchnote",
       "name": "手绘笔记",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/sketchnote.md",
-      "library_path": "styles/library/education/sketchnote.md",
-      "preview_path": "styles/drawppt/previews/sketchnote.webp",
+      "path": "education/sketchnote.md",
       "aliases": []
     },
     {
       "id": "soft-pastel-edu",
       "name": "柔和粉彩教育",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/soft-pastel-edu.md",
-      "library_path": "styles/library/education/soft-pastel-edu.md",
-      "preview_path": "styles/drawppt/previews/soft-pastel-edu.webp",
+      "path": "education/soft-pastel-edu.md",
       "aliases": []
     },
     {
       "id": "storyboard",
       "name": "故事板旅程",
       "category": "education",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/education/storyboard.md",
-      "library_path": "styles/library/education/storyboard.md",
-      "preview_path": "styles/drawppt/previews/storyboard.webp",
+      "path": "education/storyboard.md",
       "aliases": []
     },
     {
       "id": "warm-academic-humanism",
       "name": "暖色学术人文风格",
       "category": "education",
-      "origin": "local",
-      "source_path": "styles/local/C-warm-academic-humanism.md",
-      "library_path": "styles/library/education/warm-academic-humanism.md",
-      "preview_path": null,
+      "path": "education/warm-academic-humanism.md",
       "aliases": [
         "claude-style"
       ]
@@ -199,71 +143,51 @@
       "id": "8bit-retro",
       "name": "8位复古游戏",
       "category": "fun",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/fun/8bit-retro.md",
-      "library_path": "styles/library/fun/8bit-retro.md",
-      "preview_path": "styles/drawppt/previews/8bit-retro.webp",
+      "path": "fun/8bit-retro.md",
       "aliases": []
     },
     {
       "id": "cinematic-poster",
       "name": "电影海报",
       "category": "fun",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/fun/cinematic-poster.md",
-      "library_path": "styles/library/fun/cinematic-poster.md",
-      "preview_path": "styles/drawppt/previews/cinematic-poster.webp",
+      "path": "fun/cinematic-poster.md",
       "aliases": []
     },
     {
       "id": "minion-mayhem",
       "name": "小黄人乱斗",
       "category": "fun",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/fun/minion-mayhem.md",
-      "library_path": "styles/library/fun/minion-mayhem.md",
-      "preview_path": "styles/drawppt/previews/minion-mayhem.webp",
+      "path": "fun/minion-mayhem.md",
       "aliases": []
     },
     {
       "id": "whiteboard-strategy",
       "name": "白板策略",
       "category": "fun",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/fun/whiteboard-strategy.md",
-      "library_path": "styles/library/fun/whiteboard-strategy.md",
-      "preview_path": "styles/drawppt/previews/whiteboard-strategy.webp",
+      "path": "fun/whiteboard-strategy.md",
       "aliases": []
     },
     {
       "id": "dark-mode-tech",
       "name": "暗黑科技",
       "category": "tech",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/tech/dark-mode-tech.md",
-      "library_path": "styles/library/tech/dark-mode-tech.md",
-      "preview_path": "styles/drawppt/previews/dark-mode-tech.webp",
+      "path": "tech/dark-mode-tech.md",
       "aliases": []
     },
     {
       "id": "gradient-glass",
       "name": "渐变拟物玻璃卡片风格",
       "category": "tech",
-      "origin": "local",
-      "source_path": "styles/local/A-gradient-glass.md",
-      "library_path": "styles/library/tech/gradient-glass.md",
-      "preview_path": null,
+      "path": "tech/gradient-glass.md",
       "aliases": []
     },
     {
       "id": "neon-nightlife",
       "name": "霓虹夜生活",
       "category": "tech",
-      "origin": "drawppt",
-      "source_path": "styles/drawppt/tech/neon-nightlife.md",
-      "library_path": "styles/library/tech/neon-nightlife.md",
-      "preview_path": "styles/drawppt/previews/neon-nightlife.webp",
+      "path": "tech/neon-nightlife.md",
       "aliases": []
     }
-  ]
+  ],
+  "updated_at": "2026-03-18"
 }

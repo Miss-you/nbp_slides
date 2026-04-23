@@ -10,14 +10,6 @@ vintage-travel
 - Nano Banana Pro (gemini-3-pro-image-preview)
 - Seedream
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/vintage-travel
-- 原始分类：创意
-- 标签：vintage、travel、artdeco、poster
-- 徽标：无
-- 预览图：../previews/vintage-travel.webp
-
 ## 风格描述
 致敬1930至1940年代美国WPA（公共事业振兴署）国家公园系列海报的装饰艺术风格。整体呈现丝网印刷质感，色彩以大块平涂色面构成，刻意限制调色板在4至6种颜色以内，模拟当年的多版套色印刷工艺。地貌以几何化、图案化的方式简化，山脉、峡谷和森林均以粗犷的几何块面表达，层层叠叠形成强烈的空间纵深感。字体采用高耸修长的Art Deco装饰艺术风格字体，字间距宽，字母棱角分明，常配合装饰性横线和边框。配色以大地橙、森林绿和奶油色为基调，呈现温暖的历史厚重感。
 

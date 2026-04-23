@@ -13,14 +13,6 @@ mind-map
 - Listenhub
 - Lovart
 
-## 风格来源
-- 平台：DrawPPT
-- 原始链接：https://www.drawppt.com/zh-CN/templates/mind-map
-- 原始分类：教育
-- 标签：mindmap、brainstorming、concept、organic
-- 徽标：无
-- 预览图：../previews/mind-map.webp
-
 ## 原始提示词
 ```text
 Neural network, brainstorming web. Layout: Central node with organic branches extending outward. Visuals: Nodes are colored bubbles connected by curved bezier lines. Style: Organic, biological interface, clean UI. White background with colorful distinct branches.

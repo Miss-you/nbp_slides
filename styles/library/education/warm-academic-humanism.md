@@ -9,9 +9,6 @@ warm-academic-humanism
 ## 适配模型
 - Nano Banana Pro (gemini-3-pro-image-preview)
 
-## 风格来源
-来自 [awesome-nanobanana-prompts](https://github.com/Transcendo/awesome-nanobanana-prompts) PPT 示例（Humanities PPT），Anthropic/Claude 式设计语言。
-
 ## 风格描述
 温暖的学术人文风格，融合了 Anthropic/Claude 品牌的设计语言。整体氛围知性、温暖、有质感，适合深度思想性文章的视觉化表达。强调结构化网格布局与有机手绘元素的结合，营造"高级纸张上的手写笔记"感。
 
