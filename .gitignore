@@ -36,6 +36,7 @@ env/
 # Environment variables
 .env
 .env.local
+token.yaml
 
 # OS
 .DS_Store
@@ -43,10 +44,16 @@ Thumbs.db
 
 # Generated files
 generated_slides/
+generated_*/
+generated_slides_bak/
+output/
+workspace/
+archive/
 *.jpg
 *.jpeg
 *.png
 *.webp
+*.pptx
 
 # Database
 *.db
@@ -59,5 +66,3 @@ generated_slides/
 # Temporary files
 *.tmp
 *.temp
-
-generated_slides/
