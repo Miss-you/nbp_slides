@@ -45,7 +45,6 @@ Thumbs.db
 # Generated files
 generated_slides/
 generated_*/
-generated_slides_bak/
 output/
 workspace/
 archive/
