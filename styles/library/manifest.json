@@ -1,5 +1,5 @@
 {
-  "style_count": 25,
+  "style_count": 34,
   "categories": [
     "business",
     "creative",
@@ -29,6 +29,26 @@
       "category": "business",
       "path": "business/ted-style.md",
       "aliases": []
+    },
+    {
+      "id": "archival-casefile",
+      "name": "混合媒介档案卷宗风",
+      "category": "business",
+      "path": "business/archival-casefile.md",
+      "aliases": [
+        "mixed-media-archival-casefile",
+        "casefile"
+      ]
+    },
+    {
+      "id": "thermal-receipt-checklist",
+      "name": "热敏纸票据清单风",
+      "category": "business",
+      "path": "business/thermal-receipt-checklist.md",
+      "aliases": [
+        "thermal-receipt-ticket",
+        "thermal-receipt"
+      ]
     },
     {
       "id": "clay-mimicry",
@@ -89,6 +109,26 @@
       "aliases": []
     },
     {
+      "id": "retro-pop-swiss-grid",
+      "name": "70年代复古波普网格风",
+      "category": "editorial",
+      "path": "editorial/retro-pop-swiss-grid.md",
+      "aliases": [
+        "retro-pop-grid",
+        "retro-pop-swiss"
+      ]
+    },
+    {
+      "id": "theater-ticket-scrapbook",
+      "name": "剧场票根叙事风",
+      "category": "editorial",
+      "path": "editorial/theater-ticket-scrapbook.md",
+      "aliases": [
+        "retro-ticket-collage",
+        "theater-ticket"
+      ]
+    },
+    {
       "id": "ikea-style",
       "name": "宜家风格",
       "category": "education",
@@ -140,6 +180,35 @@
       ]
     },
     {
+      "id": "stationery-folder-clipboard",
+      "name": "文具文件夹剪贴板风",
+      "category": "education",
+      "path": "education/stationery-folder-clipboard.md",
+      "aliases": [
+        "physical-folder-doc",
+        "folder-clipboard"
+      ]
+    },
+    {
+      "id": "terracotta-doodle-notes",
+      "name": "陶土色手绘涂鸦笔记风",
+      "category": "education",
+      "path": "education/terracotta-doodle-notes.md",
+      "aliases": [
+        "terracotta-doodle"
+      ]
+    },
+    {
+      "id": "vintage-scrapbook-journal",
+      "name": "复古手帐调查板风",
+      "category": "education",
+      "path": "education/vintage-scrapbook-journal.md",
+      "aliases": [
+        "vintage-scrapbook-notes",
+        "scrapbook-journal"
+      ]
+    },
+    {
       "id": "8bit-retro",
       "name": "8位复古游戏",
       "category": "fun",
@@ -187,7 +256,27 @@
       "category": "tech",
       "path": "tech/neon-nightlife.md",
       "aliases": []
+    },
+    {
+      "id": "acid-retrofuturist-blocks",
+      "name": "酸性色块复古未来风",
+      "category": "tech",
+      "path": "tech/acid-retrofuturist-blocks.md",
+      "aliases": [
+        "acid-retrofuturist-color-block",
+        "neon-retro-tech-blocks"
+      ]
+    },
+    {
+      "id": "blueprint-pop-lab",
+      "name": "坐标蓝图波普实验室风",
+      "category": "tech",
+      "path": "tech/blueprint-pop-lab.md",
+      "aliases": [
+        "blueprint-pop-lab-infographic",
+        "coordinate-blueprint"
+      ]
     }
   ],
-  "updated_at": "2026-03-18"
+  "updated_at": "2026-04-27"
 }

@@ -54,6 +54,9 @@ archive/
 *.webp
 *.pptx
 
+# Keep style-library demo preview images versionable.
+!styles/library/**/demo/**/*.png
+
 # Database
 *.db
 *.sqlite
