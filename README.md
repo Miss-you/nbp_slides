@@ -110,7 +110,7 @@ styles/<category>/<style-id>/
 ├── <style-id>.md          # reusable style definition
 └── reference/
     ├── prompts.md         # prompts used for preview images
-    └── *.png              # preview/reference images
+    └── *.jpg              # preview/reference images
 ```
 
 | Category | Styles |

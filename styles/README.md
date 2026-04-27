@@ -9,7 +9,7 @@ styles/<category>/<style-id>/
   <style-id>.md
   reference/
     prompts.md
-    *.png
+    *.jpg
 ```
 
 - `business/`：5 个

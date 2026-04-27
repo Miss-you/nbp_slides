@@ -56,7 +56,7 @@ archive/
 *.pptx
 
 # Keep style reference preview images versionable.
-!styles/**/reference/**/*.png
+!styles/**/reference/**/*.jpg
 
 # Database
 *.db
