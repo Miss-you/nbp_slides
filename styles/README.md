@@ -2,7 +2,15 @@
 
 ## 可用风格
 
-`styles/library/` 下共 34 个可用风格，按 6 个分类组织：
+`styles/` 下共 34 个可用风格，按 6 个分类组织。每个风格都是自包含目录：
+
+```text
+styles/<category>/<style-id>/
+  <style-id>.md
+  reference/
+    prompts.md
+    *.png
+```
 
 - `business/`：5 个
 - `education/`：10 个
@@ -11,7 +19,7 @@
 - `editorial/`：4 个
 - `fun/`：4 个
 
-完整清单见 `styles/library/manifest.json`。每个风格文件包含风格描述、基础提示词模板、页面类型模板和使用示例。
+完整清单见 `styles/manifest.json`。每个风格文件包含风格描述、基础提示词模板、页面类型模板和使用示例；`reference/` 存放示例图和生成这些示例图的 prompt。
 
 ## 参考来源
 
@@ -31,5 +39,6 @@
 
 ## 使用建议
 
-- 想直接挑风格复用：从 `styles/library/<category>/<style-id>.md` 读取完整定义
-- 想看完整清单：先看 `styles/library/manifest.json`
+- 想直接挑风格复用：从 `styles/<category>/<style-id>/<style-id>.md` 读取完整定义
+- 想看示例图和示例 prompt：看 `styles/<category>/<style-id>/reference/`
+- 想看完整清单：先看 `styles/manifest.json`

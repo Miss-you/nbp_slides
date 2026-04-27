@@ -54,8 +54,8 @@ archive/
 *.webp
 *.pptx
 
-# Keep style-library demo preview images versionable.
-!styles/library/**/demo/**/*.png
+# Keep style reference preview images versionable.
+!styles/**/reference/**/*.png
 
 # Database
 *.db
